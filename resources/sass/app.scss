@@ -1,8 +1,374 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Materialize CSS
+@import "~materialize-css/sass/materialize";
+
+// Snotify
+@import "~vue-snotify/styles/material";
+
+// Vodal
+@import "~vodal/common.css";
+@import "~vodal/rotate.css";
+
+
+.spinner{
+    @extend .progress;
+    margin:0;
+}
+
+.slide-text{
+    @extend .captionSlide;
+}
+
+.background-slide-text{
+    background-color: rgba(0, 0, 0, 0.58);
+    padding: 10px;
+    color: #ffffff !important;
+}
+
+.tags-slide{
+    font-size: 14px!important;
+    margin-top:20px!important;
+}
+
+.tags{
+    font-weight: 400!important;
+    color: #ffffff!important;
+
+}
+
+h6 .tags{
+    line-height: 0%!important;
+};
+
+.spinner .indeterminate {
+    background-color: #752924;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #ffffff;
+}
+.slider {
+    width: 100%;
+    margin: 0 auto;
+}
+.slider .indicators {
+    z-index: 100;
+}
+
+.card-date{
+    font-size: 10px;
+}
+
+.card .card-content .card-title {
+    line-height: 0px!important;
+}
+
+footer.page-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #f8f8f8;
+    color: #212121;
+}
+
+footer.page-footer>h5 {
+    color: #212121;
+}
+
+.adress-footer{
+    font-size: 13px;
+}
+
+.instalogo{
+    width: 100px;
+    margin: 0 auto;
+}
+
+.instagram-card{
+    background-color: #f1f1f1;
+}
+
+.data-evento{
+    color: #8f2c17;
+}
+.divisao-right{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px dotted #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0!important;
+    padding: 0;
+}
+
+.card.horizontal .card-image img {
+    max-width: 200px!important;
+}
+
+.eventos_title{
+    font-weight: 300!important;
+    font-size: 20px!important;
+}
+
+img.insta_image {
+    max-width: 30px;
+    height: auto;
+}
+
+.insta_font{
+    font-size: 12px;
+}
+
+element.style {
+}
+
+.slider .indicators .indicator-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 2px;
+    background-color: #8d2d17;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    border-radius: 50%;
+    border: 2px solid #000000;
+
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #47484c;
+}
+
+.view_instagram{
+    margin-left: 10%;
+}
+
+.social-media{
+    margin-top:1%;
+}
+
+.pagination li.active {
+    background-color: #8c2d19;
+}
+
+.week-slider{
+    font-size: 17px;
+    margin-top: 11.9%;
+    background-color: #8c2d19;
+    color:#fff;
+    padding: 5px;
+    position: absolute;
+    z-index: 9;
+    box-shadow: 3px 3px 5px #6b6b6b;
+}
+
+.video-icon-noticias{
+    color: #fff;
+    opacity: 0.7;
+    margin: 0 auto;
+}
+
+.card-title-icon{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    pointer-events: none!important;
+}
+
+.playIcon{
+    color:#fff;
+}
+
+.activator{
+    cursor:pointer;
+}
+
+.caption {
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    padding: 6px 12px;
+    width: 100%;
+    z-index: 9999;
+    color: #fff;
+    margin: 15% auto;
+}
+
+.owl-carousel div h2, .owl-carousel div .textoverlay{
+    position:absolute;
+    color:#FFF;
+    z-index: 999;
+    font-size:12px;
+    display:block;
+}
+
+
+#feupworld_slide .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.owl-carousel {
+    position: relative;
+    .item {
+        position: relative;
+
+        img {
+            position: relative;
+        }
+
+        p {
+            position: absolute;
+            font-size: 1.8rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .owl-controls {
+        position: relative;;
+        top: 0;
+        left: 0;
+        transform: translate(0%,-100%);
+        width: 100%;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+
+        .owl-prev {
+            float: left;
+        }
+        .owl-next {
+            float: right;
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    background: #c1c1c1;
+    margin-right: 5px;
+    display: inline-block;  /*for making them horizontal, if you want vertical then you can use- display: block*/
+}
+
+.owl-dot.active {
+    background: #8c2d19;
+}
+
+.owl-carousel div h2, .owl-carousel div .textoverlay{
+    position:absolute;
+    color:#FFF;
+    font-size:25px;
+    display:block;
+    font-weight: 300!important;
+}
+
+.firstSlide{
+    margin-top:18%;
+    margin-left:17%;
+}
+
+.captionSlide{
+    margin-top: 18%;
+    margin-left: 3%;
+}
+
+.week-slider{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.tag-link a{
+    color: #8c2d19;
+}
+
+.ver-mais{
+    color: #8c2d19!important;
+}
+.event-link{
+    color:#000;
+}
+
+.hr-right{
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+}
+
+.show-link{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.hashtag{
+    margin-top:21px!important;
+}
+
+@media screen and (max-width: 480px) {
+    .owl-dots{
+        display: none;
+    }
+
+    .background-slide-text{
+        background-color: rgba(0, 0, 0, 0.58);
+        padding: 7px;
+        color: #ffffff !important;
+
+    }
+
+    .tags-slide{
+        font-size: 8px!important;
+        margin-top:-5%!important;
+    }
+
+    .hashtag{
+        margin-top:-12px!important;
+    }
+
+    .captionSlide{
+        margin-top: 12%;
+        margin-left: 10%;
+    }
+}
+
+a {
+    color: #8c2d19;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}

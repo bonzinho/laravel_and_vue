@@ -1,5 +1,7 @@
 //window._ = require('lodash');
 
+import {NAME_TOKEN} from  './configs/config'
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -8,8 +10,9 @@
 
 try {
     //window.Popper = require('popper.js').default;
-    //window.$ = window.jQuery = require('jquery');
-    require('bootstrap');
+    window.$ = window.jQuery = require('jquery').default;
+    require('materialize-css');
+    require('owl.carousel');
 } catch (e) {}
 
 /**
@@ -20,6 +23,12 @@ try {
 
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
+// Verificar se tem o tokem jwt, caso tenha adiciona no header
+const token = localStorage.getItem(NAME_TOKEN)
+if(token)
+    window.axios.defaults.headers.common['Authorization'] = `bearer ${token}`;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

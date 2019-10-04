@@ -7,6 +7,18 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
+use App\Events\AfterInsertAndEditDestaqueEvent;
+use App\Events\AfterInsertAndEditSecondDestaqueEvent;
+use App\Events\CronTwitterEvent;
+use App\Events\NewsletterCreatedEvent;
+use App\Events\NoticiaStoredEvent;
+use App\Listeners\NoticiaPhotoUpload;
+use App\Listeners\NoticiaShareInTwitter;
+use App\Listeners\SendNewsletter;
+use App\Listeners\ShareInTwitter;
+use App\Listeners\UploadIMG;
+use App\Listeners\UploadSecondIMG;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -18,6 +30,22 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        NoticiaStoredEvent::class => [
+            NoticiaPhotoUpload::class,
+            NoticiaShareInTwitter::class,
+        ],
+        NewsletterCreatedEvent::class => [
+            SendNewsletter::class,
+        ],
+        AfterInsertAndEditDestaqueEvent::class => [
+            UploadIMG::class,
+        ],
+        AfterInsertAndEditSecondDestaqueEvent::class => [
+            UploadSecondIMG::class,
+        ],
+        CronTwitterEvent::class => [
+            ShareInTwitter::class,
+        ]
     ];
 
     /**
